@@ -1,12 +1,8 @@
-# 21 en modo simple de terminal
 import random
-dealer = int
+dealer = int(0)
 jugador = []
 cartas = ["2","3","4","5","6","7","8","9","10","J","Q","K","As"]
-cont = 0
-
-
-sumcar = int
+sumcar = int(0)
 x = int(2)
 respuesta = str
 cuentaCartas = 0
@@ -14,12 +10,11 @@ cuentaCartas = 0
 print("Hola, éste es un juego de Blackjack o 21. Comencemos.")
 
 for num in range(0,x): # Por cada número que haya en un rango desde 0 hasta lo que vale x, o sea, 2,
-    jugador.append(random.choice(cartas)) # utiliza .append para agregar lo que escogió random a las cartas del jugador.
-    cont+=1
-
+    jugador.append(random.choice(cartas)) # utiliza .append para agregar lo que escogió random a las
+                                          # cartas del jugador.
 print("Jugador, tus cartas son", jugador)
 
-while respuesta == "sí" or "si":
+while respuesta == "sí" or "si": # 
     respuesta = input("¿Solicitas otra carta?:").lower()
     if respuesta == "no":
         break
@@ -73,5 +68,5 @@ else:
 
 jugador.clear()
 sumcar = 0
-cont = 0
 cuentaCartas = 0
+dealer = 0
